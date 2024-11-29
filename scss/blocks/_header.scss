@@ -3,22 +3,20 @@
   text-align: center;
   align-items: center;
 
-  padding: 20px 40px;
-  // padding-block: 20px;
-  // padding-inline: clamp(20, 40px / 1440 * 100vw, 40px);
+  padding: 10px 40px;
   justify-content: space-between;
   background-color: var(--premium-pink);
   overflow: hidden;
 
   @include tablet {
-    padding: 15px 20px;
+    padding: 10px 20px;
   }
 
   &_logo {
     color: #fff;
     font-weight: 800;
     & span {
-      color: #ffc1d8;
+      color: var(--pink-span);
     }
   }
 
@@ -71,7 +69,6 @@
       margin-inline: auto;
     }
   }
-  //   search-header_active
   &_active {
     min-width: 200px;
   }

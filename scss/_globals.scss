@@ -17,7 +17,7 @@ svg * {
 }
 
 h1 {
-  @include fluid-text(70, 36);
+  @include fluid-text(70, 21);
 }
 
 h2 {
@@ -32,49 +32,45 @@ h4 {
   @include fluid-text(38, 26);
 }
 
-.btn-solid-pink {
-  max-width: 200px;
-  height: 64px;
-  padding: 20px 65px;
-  font-weight: 600;
+.btn-solid-pink,
+.btn-outline-pink {
+  padding: 15px 65px;
   text-align: center;
+  font-weight: 600;
   border-radius: 40px;
+  transition-duration: 0.5s;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0px 7px var(--pink-subtle);
+  }
+  @include tablet {
+    padding: 10px 40px;
+    font-size: 14px;
+  }
+
+  @include mobileL {
+    padding: 7px 25px;
+    font-size: 10px;
+  }
+}
+
+.btn-solid-pink {
   background-color: #fff;
 
   color: var(--premium-pink);
   border: 2px solid var(--premium-pink);
-  transition-duration: 0.5s;
-  cursor: pointer;
 
   @include hover {
     color: var(--pink-hover);
     border-color: var(--pink-hover);
   }
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0px 7px var(--pink-subtle);
-  }
-
-  @include tablet {
-    padding: 10px 40px;
-  }
 }
 
 .btn-outline-pink {
-  padding: 20px 65px;
-  font-weight: 600;
-  text-align: center;
-  border-radius: 40px;
-
   color: #fff;
   background-color: var(--premium-pink);
-  transition-duration: 0.5s;
-  cursor: pointer;
+
   @include hover {
     background-color: var(--pink-hover);
-  }
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0px 7px var(--pink-subtle);
   }
 }

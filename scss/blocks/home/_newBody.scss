@@ -1,0 +1,81 @@
+.newBody {
+  display: flex;
+  justify-content: space-around;
+  column-gap: 20px;
+
+  width: 100%;
+  padding-block: 100px;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+
+    padding-block: 60px;
+  }
+  @include mobileL {
+    padding-block: 40px;
+  }
+
+  &_images {
+    position: relative;
+    width: 450px;
+    height: 500px;
+
+    @include mobile {
+      width: 365px;
+    }
+    @include mobileL {
+      width: 320px;
+    }
+  }
+
+  &_barbell {
+    position: absolute;
+    top: 0;
+    left: -10px;
+  }
+
+  &_press {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.motivation-newBody {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  @include mobile {
+    width: 400px;
+  }
+
+  @include mobileL {
+    width: 320px;
+    row-gap: 15px;
+  }
+
+  &_title {
+    font-weight: 700;
+    color: var(--premium-pink);
+
+    @include mobileL {
+      font-size: 30px;
+    }
+  }
+
+  & p {
+    color: var(--grey-copy);
+    line-height: 2.5;
+
+    @include mobileL {
+      line-height: 2;
+    }
+  }
+  &_btn {
+    align-self: flex-start;
+  }
+}
