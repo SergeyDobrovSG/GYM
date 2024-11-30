@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  z-index: 5;
   display: flex;
   text-align: center;
   align-items: center;
@@ -15,9 +17,17 @@
   &_logo {
     color: #fff;
     font-weight: 800;
+    transition-duration: 1s;
+
     & span {
       color: var(--pink-span);
     }
+  }
+  &_logo-active {
+    width: 0;
+
+    overflow: hidden;
+    transition-duration: 1s;
   }
 
   &_search {
@@ -30,6 +40,7 @@
     }
   }
 }
+
 .menu-header {
   width: 100%;
   color: #fff;
@@ -44,7 +55,12 @@
 .search-header {
   min-width: 117px;
   position: relative;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
+
+  @include mobileL {
+    min-width: 0px;
+    width: 0px;
+  }
 
   &_inp {
     outline-color: var(--pink-hover);
@@ -52,6 +68,13 @@
     border-radius: 40px;
     padding: 10px 50px 10px 10px;
     width: 100%;
+
+    // @include mobileL {
+    //   display: none;
+    //   &_inp-active {
+    //     display: block;
+    //   }
+    // }
   }
 
   &_btn {
@@ -70,7 +93,11 @@
     }
   }
   &_active {
-    min-width: 200px;
+    min-width: 250px;
+
+    @include desktop {
+      min-width: 200px;
+    }
   }
 }
 

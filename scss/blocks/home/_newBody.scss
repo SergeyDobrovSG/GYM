@@ -11,10 +11,10 @@
     align-items: center;
     row-gap: 20px;
 
-    padding-block: 60px;
+    padding-block: 30px;
   }
   @include mobileL {
-    padding-block: 40px;
+    padding-block: 15px;
   }
 
   &_images {
@@ -23,10 +23,12 @@
     height: 500px;
 
     @include mobile {
-      width: 365px;
+      width: 350px;
+      height: 400px;
     }
     @include mobileL {
-      width: 320px;
+      width: 250px;
+      height: 270px;
     }
   }
 
@@ -34,12 +36,24 @@
     position: absolute;
     top: 0;
     left: -10px;
+    @include mobile {
+      width: 280px;
+    }
+    @include mobileL {
+      width: 170px;
+    }
   }
 
   &_press {
     position: absolute;
     bottom: 0;
     right: 0;
+    @include mobile {
+      width: 220px;
+    }
+    @include mobileL {
+      width: 160px;
+    }
   }
 }
 
